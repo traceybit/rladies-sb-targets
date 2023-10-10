@@ -16,16 +16,14 @@
 
 # Load packages required to define the pipeline:
 library(targets)
-library(tidyverse)
-library(here)
-library(stringr)
-library(knitr)
+# library(tidyverse)
+# library(here)
 
 # library(tarchetypes) # Load other packages as needed.
 
 # Set target options:
 tar_option_set(
-  packages = c("tidyverse") # packages that your targets need to run
+  packages = c("tidyverse", "here") # packages that your targets need to run
   # format = "qs", # Optionally set the default storage format. qs is fast.
   #
   # For distributed computing in tar_make(), supply a {crew} controller
@@ -67,17 +65,22 @@ tar_source()
 list(
   
   ## read in the data
-  tar_target(name = file, command = file.path(here::here("traceybit-lastfm.csv"), format = "file"),
+  tar_target(name = file, command = file.path(here::here("data/traceybit-lastfm.csv")), format = "file"),
   
   ## clean the data 
-  tar_target(name = data, clean_data(file)),
+  tar_target(name = data, command = clean_data(file)),
   
-  ## perform an analysis
+  ## create table of play counts
+  tar_target(name = plays_artists_df, command = find_plays(data)),
+
+  ## plot heatmap
+  tar_target(name = listening_heatmap, command = plot_heatmap(plays_artists_df)),
+
+  ## create top artist table
+  tar_target(name = top_artist_df, command = find_top_artists(data)),
+
+  ## plot top artists
+  tar_target(name = artist_fig, command = make_artist_fig(top_artist_df))
   
-  
-  
-  tar_target(
-    name = model,
-    command = coefficients(lm(y ~ x, data = data))
   )
-)
+  
