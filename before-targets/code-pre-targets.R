@@ -1,10 +1,8 @@
 ## before targets framework
 
 ## libraries
-library(targets)
 library(tidyverse)
 library(here)
-library(stringr)
 
 ## read in data
 data <- read_csv(here::here("data/traceybit-lastfm.csv"))
