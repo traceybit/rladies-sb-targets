@@ -1,0 +1,12 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+artist_fig|stem|408b60b7a2785983|029350e6a68911f6|a3a9d119ac8aace7|-37185032||t19641.2543223341s|b42b8461c0f40f0c|126944|rds|local|vector|||0.053||
+clean_data|function|330cc2f7b4787e7a|||||||||||||||
+data|stem|750da77b41754a7b|ebc4cad6c51f92a9|866921ae354b8856|1588979285||t19641.2543182148s|3d565c2184271d40|9078|rds|local|vector|||0.218||
+file|stem|cadf07e62fb653e1|a954f6584b131f96|9acbcfc91c542028|-1301001980|/Users/traceymangin/GitHub/rladies-sb-targets/data/traceybit-lastfm.csv|t19640.8496899886s|65b5ca659d6354e9|33321|file|local|vector|||0.596||
+find_plays|function|ffdd11f909e64fab|||||||||||||||
+find_top_artists|function|c1fc00b5bdb63248|||||||||||||||
+listening_heatmap|stem|5be1fc5cbd26e804|f1b5edca9454a4bd|3a494077d83cef83|-651120204||t19641.2543234574s|8d42cef63a3586ff|122998|rds|local|vector|||0.032||
+make_artist_fig|function|2fdab312124d0bb4|||||||||||||||
+plays_artists_df|stem|553e45a490c9a301|ef617057cd3ff5a9|ef76de1320c08581|-34465228||t19641.2543210016s|b14f2eba8df23511|416|rds|local|vector|||0.048||
+plot_heatmap|function|0beaf6945af00438|||||||||||||||
+top_artist_df|stem|910baa4ffa2e7589|e33c5716a4d81a96|88bae5413a29ab73|1416384410||t19641.2543204015s|7c10cefd0203d368|2260|rds|local|vector|||0.146||

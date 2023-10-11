@@ -102,10 +102,10 @@ listening_heatmap <-
   facet_grid(~play_type) +
   coord_equal(expand = TRUE) +
   labs(x = "week", y = "", fill = "count") +
-  # scale_fill_gradient(low = "#E8F5E6",
-  #                     high = "#077F09") +
-  scale_fill_gradient(low = "#DEE0E9",
-                      high = "#0700CC") +
+  scale_fill_gradient(low = "#E8F5E6",
+                      high = "#077F09") +
+  # scale_fill_gradient(low = "#DEE0E9",
+  #                     high = "#0700CC") +
   theme_bw() +
   theme(strip.text = element_text(size = 18),
         axis.text = element_text(size = 16),
