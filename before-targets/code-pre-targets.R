@@ -34,7 +34,7 @@ data_clean <- data %>%
 
 ## daily play summary df
 plays_artists_df <- data_clean %>%
-  ## group by day, number of songs, number of artists
+  ## group by day, date, summarise number of plays and number of artists played
   group_by(date, day) %>%
   summarise(n_plays = n(),
             n_artists = length(unique(artist))) %>%
