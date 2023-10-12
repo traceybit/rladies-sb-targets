@@ -22,7 +22,7 @@ clean_data <- function(file) {
 ## version 2: convert date to PDT
 # clean_data <- function(file) {
 # 
-# data <- data %>%
+# data <- read_csv(file)  %>%
 #   ## filter out NA data_time
 #   filter(!is.na(date_time)) %>%
 #   ## separate date and time in fourth column using stringr::word() function that extracts words in strings
