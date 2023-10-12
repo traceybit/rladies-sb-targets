@@ -23,7 +23,7 @@ library(targets)
 
 # Set target options:
 tar_option_set(
-  packages = c("tidyverse", "here") # packages that your targets need to run
+  packages = c("tidyverse", "here", "lubridate") # packages that your targets need to run
   # format = "qs", # Optionally set the default storage format. qs is fast.
   #
   # For distributed computing in tar_make(), supply a {crew} controller
