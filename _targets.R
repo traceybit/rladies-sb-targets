@@ -64,10 +64,10 @@ tar_source()
 # Replace the target list below with your own:
 list(
   
-  ## read in the data
+  ## create file name
   tar_target(name = file, command = file.path(here::here("data/traceybit-lastfm.csv")), format = "file"),
   
-  ## clean the data 
+  ## read in and clean the data 
   tar_target(name = data, command = clean_data(file)),
   
   ## create table of play counts
