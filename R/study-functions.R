@@ -120,28 +120,8 @@ listening_heatmap
 ## make table
 make_artist_fig <- function(top_artist_df) {
 
-# artist_fig <-
-#   top_artist_df %>%
-#     mutate(week = paste0("week ", week)) %>%
-#     filter(rank <= 5) %>%
-#     select(week, artist, n_artist_plays, total_n_plays, plays_vs_avg, rank) %>%
-#     ggplot(aes(y = fct_reorder(artist, -rank), x = n_artist_plays)) +
-#     geom_col() +
-#     facet_wrap(~week, ncol = 1) +
-#     labs(title = "top artists by week",
-#          x = "number of plays",
-#          y = NULL) +
-#     scale_x_continuous( expand = c(0, 0)) +
-#     theme_bw() +
-#     theme(strip.text = element_text(size = 10),
-#           # axis.text = element_text(size = 16),
-#           # axis.title = element_text(size = 18),
-#           panel.grid.major = element_blank(),
-#           panel.grid.minor = element_blank())
-
-  ## error exmaple
-  artist_fig <-
-    top_artist_df %>%
+artist_fig <-
+  top_artist_df %>%
     mutate(week = paste0("week ", week)) %>%
     filter(rank <= 5) %>%
     select(week, artist, n_artist_plays, total_n_plays, plays_vs_avg, rank) %>%
@@ -158,6 +138,26 @@ make_artist_fig <- function(top_artist_df) {
           # axis.title = element_text(size = 18),
           panel.grid.major = element_blank(),
           panel.grid.minor = element_blank())
+
+  # ## error exmaple
+  # artist_fig <-
+  #   top_artist_df %>%
+  #   mutate(week = paste0("week ", week)) %>%
+  #   filter(rank <= 5) %>%
+  #   select(week, artist, n_artist_plays, total_n_plays, plays_vs_avg, rank) %>%
+  #   ggplot(aes(y = fct_reorder(artist, -rank), x = n_artist_plays)) +
+  #   geom_col() +
+  #   facet_wrap(~week, ncol = 1) +
+  #   labs(title = "top artists by week",
+  #        x = "number of plays",
+  #        y = NULL) +
+  #   scale_x_continuous( expand = c(0, 0)) +
+  #   theme_bw() +
+  #   theme(strip.text = element_text(size = 10),
+  #         # axis.text = element_text(size = 16),
+  #         # axis.title = element_text(size = 18),
+  #         panel.grid.major = element_blank(),
+  #         panel.grid.minor = element_blank())
 
 artist_fig
 

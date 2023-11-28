@@ -66,6 +66,7 @@ list(
   
   ## create file name
   tar_target(name = file, command = file.path(here::here("data/traceybit-lastfm.csv")), format = "file"),
+  # tar_target(name = file, command = file.path(here::here("data/traceybit.csv")), format = "file"),
   
   ## read in and clean the data 
   tar_target(name = data, command = clean_data(file)),
